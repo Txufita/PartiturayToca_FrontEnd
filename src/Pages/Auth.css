@@ -1,0 +1,90 @@
+.login-container {
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 20px 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.login-container h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.authform {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.authform label {
+    font-weight: bold;
+    color: #555;
+    display: grid;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.authform input:focus {
+    border-color: #FA7020;
+    box-shadow: 0 0 5px rgba(250, 112, 32, 0.5);
+    outline: none;
+}
+
+button {
+    padding: 10px;
+    background-color: #FA7020;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 1rem;
+    width: 20%;
+}
+
+button:hover {
+    background-color: #e65c00;
+    transform: scale(1.05);
+}   
+
+.error {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: -0.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.success {
+    color: green;
+    font-size: 0.9rem;
+    margin-top: -0.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    margin-top: 1rem;
+    color: #5e753e;
+}
+.registro {
+    color: #FA7020;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+    

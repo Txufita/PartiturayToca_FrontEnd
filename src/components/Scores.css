@@ -1,0 +1,50 @@
+.score-card {
+    display: grid;
+    gap: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px 0;
+    background-color: #d8d4d4;  
+}
+.score-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}  
+.formato {
+    text-align: left;
+    text-orientation: upright;
+}
+.composer {
+    font-size: 1.2rem;
+    color: #666;
+        }  
+.score-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+} 
+.btn {
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 1px solid #FA7020;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #333;
+}
+.btn:hover {
+    color: #FA7020;
+    font-size: 1.1rem;
+    transform: scale(1.05);
+
+}
+

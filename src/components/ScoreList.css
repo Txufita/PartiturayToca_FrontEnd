@@ -1,0 +1,9 @@
+.scores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+    margin: 0 auto;
+    justify-content: center;
+    padding: 1rem;
+    max-width: 1000px;
+    }
