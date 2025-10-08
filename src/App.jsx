@@ -5,6 +5,8 @@ import Register from './Pages/register'; // Importa o componente Register da pas
 import Login from './Pages/login'; // Importa o componente Login da pasta Pages
 import About from './Pages/About';
 import Header from './components/Header'; // Importa o componente Header da pasta components
+import ScoresAdmin from './Pages/Admin/Scores';
+import ProtectedRoute from './Router/ProtectedRoute';
 
 
 function App() {
@@ -18,6 +20,9 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/about" element={<About />} />
+        <Route element={<ProtectedRoute requireAdmin={true} />}>
+          <Route path="/admin/scores" element={<ScoresAdmin />} />
+        </Route>
 
       </Routes>
     </div>

@@ -5,19 +5,19 @@ export const AuthContext = createContext(null)
 export default function AuthProvider({ children }) {
     const [user, setUser] = useState(() => {
         const raw = localStorage.getItem('auth_user');
-        return raw ? JSON.parse(user) : null;
+        return raw ? JSON.parse(raw) : null;
     });
     const [token, setToken] = useState(() => localStorage.getItem('auth_token'));
     const [loading, setLoading] = useState(false);
 
-    function persist({ user, token }) {
-        if (user) {
-            localStorage.setItem('auth_user', JSON.stringify(user));
-            setUser(user);
+    function persist({ user: u, token: t }) {
+        if (u) {
+            localStorage.setItem('auth_user', JSON.stringify(u));
+            setUser(u);
         }
-        if (token) {
-            localStorage.setItem('auth_token', token);
-            setToken(token);
+        if (t) {
+            localStorage.setItem('auth_token', t);
+            setToken(t);
         }
     }
     async function login_user({ email, password }) {
