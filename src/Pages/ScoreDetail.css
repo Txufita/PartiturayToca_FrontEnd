@@ -1,0 +1,20 @@
+.score-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: min(1100px, 95vw);
+  margin: 2rem auto;
+  align-items: start;
+}
+.score-media img, .score-media iframe {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.15);
+}
+.score-info {
+  display: grid;
+  gap: .8rem;
+}
+@media (max-width: 768px){
+  .score-detail{ grid-template-columns: 1fr; }
+}

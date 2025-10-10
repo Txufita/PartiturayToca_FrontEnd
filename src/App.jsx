@@ -7,6 +7,7 @@ import About from './Pages/About';
 import Header from './components/Header'; // Importa o componente Header da pasta components
 import ScoresAdmin from './Pages/Admin/Scores';
 import ProtectedRoute from './Router/ProtectedRoute';
+import ScoreDetail from './Pages/ScoreDetail';
 
 
 function App() {
@@ -14,7 +15,6 @@ function App() {
   return (
     <div>
       <Header />
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
@@ -23,6 +23,8 @@ function App() {
         <Route element={<ProtectedRoute requireAdmin={true} />}>
           <Route path="/admin/scores" element={<ScoresAdmin />} />
         </Route>
+        <Route path="/scores/:id" element={<ScoreDetail />} />
+
 
       </Routes>
     </div>

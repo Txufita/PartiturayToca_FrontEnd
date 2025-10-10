@@ -1,7 +1,7 @@
 import {useState} from "react";
 import {useNavigate, Link} from "react-router-dom";
 import useAuth from "../Hooks/UseAuth";
-import "./auth.css" 
+import "./auth.css";
 
 export default function Login() {
     const {login_user: login, loading} = useAuth();
@@ -18,14 +18,12 @@ export default function Login() {
             setError("Se necesita email y contraseña");
             return;
         }
-        const {ok, error} = await login(form);
+        const {ok, error, redirectTo} = await login(form);
         if (!ok) {
             setError(error);
-        
+            return;
         }
-        else {
-            navigate("/");
-        }
+        navigate(redirectTo,{replace: true});
     }
     return (
         <div className="login-container">
