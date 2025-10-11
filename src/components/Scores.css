@@ -83,23 +83,21 @@
   border-radius: 10px;
 }
 
-/* Grid contenedor (puedes dejar el tuyo; aquí sólo afinamos) */
 .scores-grid{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 1rem;
   margin: 0 auto;
   padding: 1rem;
-  max-width: 1200px; /* le damos un poco más de aire */
+  max-width: 1200px; 
 }
 
-/* Responsive pequeños ajustes */
 @media (max-width: 520px){
   .score-card{
     padding: .9rem;
   }
   .score-card .btn{
-    width: 100%; /* CTA a ancho completo en móvil */
+    width: 100%; 
     justify-content: center;
   }
 }

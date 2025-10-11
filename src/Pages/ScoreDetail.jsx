@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getScore } from "../API/scores";
 import "./ScoreDetail.css";
+import Header from "../components/Header";
 
 export default function ScoreDetail() {
   const { id } = useParams();
@@ -26,6 +27,8 @@ export default function ScoreDetail() {
   const SUGGESTED_NAME = `${score.title}.${score.file_type === "pdf" ? "pdf" : "jpg"}`;
 
   return (
+    <>
+    <Header />
     <section className="score-detail">
       <div className="score-media">
         {score.file_type === "pdf" ? (
@@ -46,5 +49,6 @@ export default function ScoreDetail() {
         </a>
       </div>
     </section>
+    </>
   );
 }

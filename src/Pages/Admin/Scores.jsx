@@ -3,6 +3,7 @@ import { getScore, getScores, postScore, updateScore, deleteScore } from "../../
 import { getComposers } from "../../API/composers";
 import { getInstruments } from "../../API/instruments";
 import { upLoad } from "../../API/upload";
+import AdminLayout from "./AdminLayout";
 
 import "./Scores.css";
 
@@ -136,7 +137,6 @@ export default function ScoresAdmin() {
             if (editingId == null) {
                 // CREATE
                 const { data } = await postScore(payload);
-                // refrescamos (podrías hacer push optimista)
                 await load();
             } else {
                 // UPDATE
@@ -180,7 +180,7 @@ export default function ScoresAdmin() {
             setUploading(true);
 
             const res = await upLoad(formData);
-            const data = res?.data;             // ✅ Axios: los datos vienen en res.data
+            const data = res?.data;  
 
             if (!data?.success) {
                 alert(data?.message || "Error subiendo archivo");
@@ -189,8 +189,8 @@ export default function ScoresAdmin() {
 
             setForm((f) => ({
                 ...f,
-                file_path: data.path,                     // p.ej. /scores/miarchivo-123.pdf
-                file_type: data.file_type || f.file_type, // 'pdf' | 'image'
+                file_path: data.path,                     
+                file_type: data.file_type || f.file_type,
             }));
         } catch (err) {
             console.error(err);
@@ -203,6 +203,7 @@ export default function ScoresAdmin() {
 
 
     return (
+        <AdminLayout>
         <div className="scores-admin">
             <header className="scores-header card">
                 <h1>Gestión de partituras</h1>
@@ -248,7 +249,7 @@ export default function ScoresAdmin() {
                                                 className="link"
                                                 target="_blank"
                                                 rel="noreferrer"
-                                                href={s.file_path}
+                                                href={`/scores/${s.id}`}
                                             >
                                                 Ver
                                             </a>
@@ -380,7 +381,7 @@ export default function ScoresAdmin() {
                                     value={form.file_type}
                                     onChange={onChange}
                                     required
-                                    disabled={!!form.file_path}  // si hay archivo subido, el tipo viene del backend
+                                    disabled={!!form.file_path} 
                                     title={form.file_path ? "El tipo se detectó automáticamente al subir el archivo" : ""}
                                 >
                                     <option value="pdf">PDF</option>
@@ -435,5 +436,6 @@ export default function ScoresAdmin() {
                 </div>
             )}
         </div>
-    );
+        </AdminLayout>
+    );
 }

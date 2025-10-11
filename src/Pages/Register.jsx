@@ -31,19 +31,30 @@ export default function Register() {
         }
     }
     return (
-        <div className="login-container">
-            <h1>Register</h1>
+        <div className="auth-card">
+            <h1 className="auth-title">Registro</h1>
+
             <form className="authform" onSubmit={onSubmit}>
-                <input type="text" placeholder="Nombre" value={form.username} onChange={e => setForm({...form, username: e.target.value})}/>
-                <input type="email" placeholder="Email" value={form.email} onChange={e => setForm({...form, email: e.target.value})}/>
-                <input type="password" placeholder="Contraseña" value={form.password} onChange={e => setForm({...form, password: e.target.value})} />
-                <input type="password" placeholder="Confirmar contraseña" value={form.confirmPassword} onChange={e => setForm({...form, confirmPassword: e.target.value})} />
-                <button type="submit" disabled={loading}>{loading ? "Loading..." : "Register"}</button>
-                {error && <p className="error">{error}</p>}
+                <input className="input" type="text" placeholder="Nombre"
+                    value={form.username} onChange={e => setForm({ ...form, username: e.target.value })} />
+                <input className="input" type="email" placeholder="Email"
+                    value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} />
+                <input className="input" type="password" placeholder="Contraseña"
+                    value={form.password} onChange={e => setForm({ ...form, password: e.target.value })} />
+                <input className="input" type="password" placeholder="Confirmar contraseña"
+                    value={form.confirmPassword} onChange={e => setForm({ ...form, confirmPassword: e.target.value })} />
+                <button className="btn btn-primary btn-block" type="submit" disabled={loading}>
+                    {loading ? "Cargando..." : "Crear cuenta"}
+                </button>
+                {error && <p className="auth-msg error">{error}</p>}
             </form>
-            <p>Already have an account? <Link className="registro" to="/login">Login</Link></p>
-        </div>
-    )
+
+            <p className="auth-foot">
+                ¿Ya tienes cuenta?
+                <Link className="auth-link" to="/login"> Inicia sesión</Link>
+            </p>
+        </div>
+    );
 }
 
 
