@@ -15,7 +15,6 @@
   border-color: var(--gray-300);
 }
 
-/* Header */
 .score-card-header{
   display: flex;
   align-items: center;
@@ -28,7 +27,7 @@
   font-weight: 900;
   color: var(--black);
   line-height: 1.2;
-  /* evitar desbordes largos */
+  
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -37,7 +36,6 @@
   -webkit-box-orient: vertical;
 }
 
-/* Chip formato (reutiliza los de la tabla) */
 .chip{
   display: inline-block;
   padding: .25rem .55rem;
@@ -50,25 +48,23 @@
   color: var(--gray-700);
   white-space: nowrap;
 }
-.chip-green{ /* PDF */
+.chip-green{ 
   background: rgba(34,197,94,.1);
   border-color: rgba(34,197,94,.25);
   color: var(--green-700);
 }
-.chip-orange{ /* imagen u otros */
+.chip-orange{ 
   background: rgba(249,115,22,.12);
   border-color: rgba(249,115,22,.28);
   color: var(--orange-600);
 }
 
-/* Meta */
 .score-meta{
   margin: 0;
   font-size: .95rem;
   color: var(--gray-700);
 }
 
-/* Footer */
 .score-card-footer{
   margin-top: .4rem;
   display: flex;
@@ -76,7 +72,6 @@
   justify-content: flex-start;
 }
 
-/* Botón: reutiliza tus estilos globales .btn y .btn-primary */
 .score-card .btn{
   padding: .55rem 1rem;
   font-size: .95rem;

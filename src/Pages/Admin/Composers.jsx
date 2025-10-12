@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import AdminLayout from './AdminLayout';
+import AdminLayout from "./AdminLayout";
 import {
   getComposers,
   postComposer,
@@ -96,7 +96,6 @@ export default function ComposersAdmin() {
         <h1 className="admin-title">Composers</h1>
         <p className="admin-subtitle">Crea, edita y elimina compositores. El menú lateral permanece visible.</p>
 
-        {/* FORM + SEARCH */}
         <div className="admin-grid" style={{ marginBottom: 12 }}>
           <div className="admin-card" style={{ maxWidth: 520 }}>
             <h3 style={{ marginBottom: 10 }}>{editingId ? "Editar compositor" : "Nuevo compositor"}</h3>
@@ -139,7 +138,6 @@ export default function ComposersAdmin() {
           </div>
         </div>
 
-        {/* LIST */}
         <div className="admin-card">
           <h3 style={{ marginBottom: 10 }}>Listado</h3>
 
@@ -177,5 +175,5 @@ export default function ComposersAdmin() {
         </div>
       </section>
     </AdminLayout>
-  );
+  );
 }

@@ -34,7 +34,7 @@ html, body, #root{
   width: min(1200px, 92vw);
   margin: 24px auto 80px auto;
 }
-/* toques decorativos suaves */
+
 .hero::before,
 .hero::after{
   content:"";
@@ -88,7 +88,6 @@ html, body, #root{
   background: #fff;
 }
 
-/* ====== Cards (misión, enfoque, comunidad) ====== */
 .cards{
   margin-top: 22px;
   display: grid;
@@ -128,7 +127,7 @@ html, body, #root{
   box-shadow: var(--shadow-sm);
 }
 
-/* ====== Stats ====== */
+
 .stats{
   margin-top: 24px;
   display: grid;
@@ -158,7 +157,6 @@ html, body, #root{
   color: var(--gray-600);
 }
 
-/* ====== Timeline ====== */
 .timeline{
   margin-top: 28px;
   background: linear-gradient(180deg, #fff, #fefefe);
@@ -192,7 +190,7 @@ html, body, #root{
 .tl-content h4{ margin: 0 0 4px 0; }
 .tl-content p{ margin: 0; color: var(--gray-600); }
 
-/* ====== FAQ ====== */
+
 .faq{
   margin-top: 24px;
   display: grid;
@@ -216,7 +214,6 @@ html, body, #root{
   color: var(--gray-600);
 }
 
-/* ====== CTA ====== */
 .cta{
   margin-top: 26px;
 }
@@ -240,7 +237,7 @@ html, body, #root{
 .cta-box p{ margin: 0; color: var(--gray-600); max-width: 60ch; }
 .cta-actions{ margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap; }
 
-/* Botones */
+
 .btn{
   display: inline-flex;
   align-items: center;
@@ -265,7 +262,7 @@ html, body, #root{
   background: linear-gradient(180deg, #fff, #fdfdfd);
 }
 
-/* ====== Responsive ====== */
+
 @media (max-width: 980px){
   .hero{ grid-template-columns: 1fr; text-align: center; }
   .hero-text h1::after{ margin-left: auto; margin-right: auto; }

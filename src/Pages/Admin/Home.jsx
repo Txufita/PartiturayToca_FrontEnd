@@ -1,4 +1,4 @@
-import AdminLayout from './AdminLayout';
+import AdminLayout from "./AdminLayout";
 import './Admin.css';
 export default function AdminHome() {
   return (

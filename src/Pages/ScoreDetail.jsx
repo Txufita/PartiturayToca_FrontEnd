@@ -20,7 +20,7 @@ export default function ScoreDetail() {
     })();
   }, [id]);
 
-  // loading único (los hooks van arriba)
+  
   if (!score) return <p>Cargando...</p>;
 
   const FILE_URL = `${BASE.replace(/\/+$/, "")}${score.file_path}`; // http://localhost:4000/scores/xxx.pdf

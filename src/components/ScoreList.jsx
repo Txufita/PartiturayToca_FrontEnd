@@ -15,12 +15,10 @@ export default function ScoreList() {
   const [loadingFilters, setLoadingFilters] = useState(true);
   const [error, setError] = useState(null);
 
-  // filtros
   const [query, setQuery] = useState("");
   const [instrumentId, setInstrumentId] = useState("");
   const [composerId, setComposerId] = useState("");
 
-  // paginación
   const [page, setPage] = useState(1);
 
   useEffect(() => {
@@ -63,29 +61,26 @@ export default function ScoreList() {
 
   const norm = (s) => String(s || "").toLocaleLowerCase();
 
-
   const getInstrumentIdFromScore = (s) => s.instrumentId ?? s.instrument?.id ?? s.instrument_id ?? "";
-  const getComposerIdFromScore  = (s) => s.composerId  ?? s.composer?.id  ?? s.composer_id  ?? "";
-  const getScoreName            = (s) => s.name ?? s.title ?? s.scoreName ?? "";
+  const getComposerIdFromScore = (s) => s.composerId ?? s.composer?.id ?? s.composer_id ?? "";
+  const getScoreName = (s) => s.name ?? s.title ?? s.scoreName ?? "";
 
-  // filtrar
   const filtered = useMemo(() => {
     const q = norm(query);
     return scores.filter((s) => {
-      const matchName       = q ? norm(getScoreName(s)).includes(q) : true;
+      const matchName = q ? norm(getScoreName(s)).includes(q) : true;
       const matchInstrument = instrumentId ? String(getInstrumentIdFromScore(s)) === String(instrumentId) : true;
-      const matchComposer   = composerId  ? String(getComposerIdFromScore(s))  === String(composerId)   : true;
+      const matchComposer = composerId ? String(getComposerIdFromScore(s)) === String(composerId) : true;
       return matchName && matchInstrument && matchComposer;
     });
   }, [scores, query, instrumentId, composerId]);
 
   useEffect(() => { setPage(1); }, [query, instrumentId, composerId]);
 
-  // paginar
   const totalPages = Math.max(1, Math.ceil(filtered.length / PER_PAGE));
   const clampedPage = Math.min(page, totalPages);
   const start = (clampedPage - 1) * PER_PAGE;
-  const end   = start + PER_PAGE;
+  const end = start + PER_PAGE;
   const pageItems = filtered.slice(start, end);
 
   const goToPage = (p) => {
@@ -96,11 +91,11 @@ export default function ScoreList() {
   };
 
   if (loading) return <div className="state">Cargando partituras…</div>;
-  if (error)   return <div className="state error">{error}</div>;
+  if (error) return <div className="state error">{error}</div>;
 
   return (
     <>
-      {/* Barra de búsqueda y filtros */}
+
       <section className="score-filters">
         <div className="filters-row">
           <div className="filter-field">
@@ -157,7 +152,6 @@ export default function ScoreList() {
         </div>
       </section>
 
-      {/* Grid de resultados (4 columnas) */}
       {filtered.length === 0 ? (
         <div className="state">Sin resultados con los filtros aplicados.</div>
       ) : (
@@ -168,7 +162,6 @@ export default function ScoreList() {
             ))}
           </section>
 
-          {/* Paginación */}
           <nav className="pagination" aria-label="Paginación de partituras">
             <button
               className="page-btn"
@@ -226,6 +219,6 @@ export default function ScoreList() {
           </nav>
         </>
       )}
-    </>
-  );
+    </>
+  );
 }

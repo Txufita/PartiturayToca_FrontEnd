@@ -19,7 +19,6 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Links rápidos */}
         <nav className="footer-col">
           <h4>Enlaces</h4>
           <ul className="links">
@@ -39,7 +38,6 @@ export default function Footer() {
           </ul>
         </nav>
 
-        {/* Newsletter */}
         <div className="footer-col">
           <h4>Newsletter</h4>
           <p className="muted">Novedades y partituras destacadas.</p>
@@ -57,10 +55,10 @@ export default function Footer() {
               <img className="redes" src="/x.svg" alt="" />
             </a>
             <a aria-label="YouTube" href="#" title="YouTube">
-               <img className="redes" src="/youtube.svg" alt="" />
+              <img className="redes" src="/youtube.svg" alt="" />
             </a>
             <a aria-label="Instagram" href="#" title="Instagram">
-               <img className="redes" src="/instagram.svg" alt="" />
+              <img className="redes" src="/instagram.svg" alt="" />
             </a>
           </div>
         </div>
@@ -77,5 +75,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  );
+  );
 }

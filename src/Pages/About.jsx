@@ -6,7 +6,7 @@ export default function About() {
     <>
       <Header />
       <main className="about">
-        {/* ===== Hero ===== */}
+
         <section className="hero">
           <div className="hero-text">
             <h1>Partitura y Toca</h1>
@@ -25,7 +25,6 @@ export default function About() {
           </div>
         </section>
 
-        {/* ===== Mission / Vision cards ===== */}
         <section className="cards">
           <article className="card">
             <div className="card-icon">🎯</div>
@@ -57,7 +56,6 @@ export default function About() {
           </article>
         </section>
 
-        {/* ===== Stats ===== */}
         <section className="stats">
           <div className="stat">
             <span className="stat-number">1.5k+</span>
@@ -77,7 +75,6 @@ export default function About() {
           </div>
         </section>
 
-        {/* ===== Timeline ===== */}
         <section className="timeline">
           <h2>Cómo hemos llegado hasta aquí</h2>
           <ol className="timeline-list">
@@ -107,7 +104,7 @@ export default function About() {
                 <h4>Panel de administración</h4>
                 <p>
                   Creamos herramientas internas para <strong>gestionar partituras,
-                  compositores e instrumentos</strong> de forma ágil.
+                    compositores e instrumentos</strong> de forma ágil.
                 </p>
               </div>
             </li>
@@ -124,7 +121,6 @@ export default function About() {
           </ol>
         </section>
 
-        {/* ===== FAQ ===== */}
         <section className="faq">
           <h2>Preguntas frecuentes</h2>
           <details className="faq-item">
@@ -150,7 +146,6 @@ export default function About() {
           </details>
         </section>
 
-        {/* ===== Contact / CTA ===== */}
         <section className="cta">
           <div className="cta-box">
             <h3>¿Tienes dudas o propuestas?</h3>
@@ -167,6 +162,6 @@ export default function About() {
         </section>
       </main>
       <Footer />
-    </>
-  );
+    </>
+  );
 }

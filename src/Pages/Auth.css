@@ -7,7 +7,7 @@
   --shadow: 0 12px 30px rgba(0,0,0,.08), 0 2px 6px rgba(0,0,0,.06);
 }
 
-/* Card del auth */
+
 .auth-card{
   width: min(560px, 92vw);
   margin: 3rem auto;
@@ -29,7 +29,7 @@
   color: transparent;
 }
 
-/* Form */
+
 .authform{
   display: grid;
   gap: .9rem;
@@ -68,7 +68,7 @@
 .btn-primary:hover{ box-shadow:0 10px 22px rgba(22,163,74,.32); }
 .btn-block{ width:100%; }
 
-/* Mensajes y pie */
+
 .auth-msg{
   text-align:center; margin:.25rem 0 0 0; font-size:.92rem;
 }
@@ -89,7 +89,7 @@
 }
 .auth-link:hover::after{ transform: scaleX(1); }
 
-/* Responsive */
+
 @media (max-width: 520px){
   .auth-card{ padding: .9rem; }
   .btn{ font-size:.95rem; }

@@ -24,7 +24,6 @@ export default function Login() {
             return;
         }
 
-        // Redirección por rol
         if (user?.role === "admin") {
             navigate("/admin/scores");
         } else {
@@ -47,6 +46,6 @@ export default function Login() {
             </form>
             <p>¿No tienes una cuenta?<Link className="registro" to="/register"> Regístrate!</Link></p>
         </div>
-    );
+    );
 
 }

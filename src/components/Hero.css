@@ -14,7 +14,6 @@
   overflow: hidden;
 }
 
-/* toques decorativos suaves */
 .hero::before,
 .hero::after{
   content:"";
@@ -56,7 +55,6 @@
   max-width: 48ch;
 }
 
-/* Imagen */
 .hero-image{
   display: flex;
   justify-content: center;
@@ -72,7 +70,6 @@
   background: #fff;
 }
 
-/* Línea/acento bajo el h1 (sutil y con tu paleta) */
 .hero-text h1::after{
   content:"";
   display:block;
@@ -84,7 +81,6 @@
   box-shadow: 0 4px 10px rgba(34,197,94,.25);
 }
 
-/* ====== Responsive ====== */
 @media (max-width: 980px){
   .hero{
     grid-template-columns: 1fr;

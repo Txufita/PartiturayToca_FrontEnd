@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import AdminLayout from './AdminLayout'
+import AdminLayout from "./AdminLayout"
 import { getInstruments, postInstrument, updateInstruments, deleteInstrument } from "../../API/instruments";
 
 export default function InstrumentsAdmin() {
@@ -87,7 +87,6 @@ export default function InstrumentsAdmin() {
         <h1 className="admin-title">Instruments</h1>
         <p className="admin-subtitle">Crea, edita y elimina instrumentos. El menú lateral permanece visible.</p>
 
-        {/* FORM CARD */}
         <div className="admin-grid" style={{ marginBottom: 12 }}>
           <div className="admin-card" style={{ maxWidth: 520 }}>
             <h3 style={{ marginBottom: 10 }}>{editingId ? "Editar instrumento" : "Nuevo instrumento"}</h3>
@@ -118,7 +117,6 @@ export default function InstrumentsAdmin() {
             </form>
           </div>
 
-          {/* SEARCH CARD */}
           <div className="admin-card">
             <h3 style={{ marginBottom: 10 }}>Buscar</h3>
             <input
@@ -131,7 +129,6 @@ export default function InstrumentsAdmin() {
           </div>
         </div>
 
-        {/* LIST CARD */}
         <div className="admin-card">
           <h3 style={{ marginBottom: 10 }}>Listado</h3>
 
@@ -169,5 +166,5 @@ export default function InstrumentsAdmin() {
         </div>
       </section>
     </AdminLayout>
-  );
+  );
 }

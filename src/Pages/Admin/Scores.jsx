@@ -25,11 +25,11 @@ export default function ScoresAdmin() {
     const [query, setQuery] = useState("");
     const [loading, setLoading] = useState(false);
 
-    // catálogos
+    
     const [composers, setComposers] = useState([]);
     const [instruments, setInstruments] = useState([]);
 
-    // modal y confirmación
+    
     const [isOpen, setIsOpen] = useState(false);
     const [confirm, setConfirm] = useState({ open: false, id: null, title: "" });
     const [saving, setSaving] = useState(false);
@@ -81,14 +81,14 @@ export default function ScoresAdmin() {
         );
     }, [items, query]);
 
-    // abrir modal crear
+    
     function openCreate() {
         setEditingId(null);
         setForm(empty);
         setIsOpen(true);
     }
 
-    // abrir modal editar
+    
     async function openEdit(id) {
         try {
             setEditingId(id);
@@ -135,11 +135,11 @@ export default function ScoresAdmin() {
             };
 
             if (editingId == null) {
-                // CREATE
+                
                 const { data } = await postScore(payload);
                 await load();
             } else {
-                // UPDATE
+                
                 const { data } = await updateScore(editingId, payload);
                 await load();
             }
@@ -199,7 +199,6 @@ export default function ScoresAdmin() {
             setUploading(false);
         }
     }
-
 
 
     return (
@@ -293,7 +292,7 @@ export default function ScoresAdmin() {
                 )}
             </div>
 
-            {/* Modal crear/editar */}
+            
             {isOpen && (
                 <div className="modal-backdrop" onClick={closeModal}>
                     <div className="modal" onClick={(e) => e.stopPropagation()}>
@@ -402,7 +401,7 @@ export default function ScoresAdmin() {
                 </div>
             )}
 
-            {/* Confirmación de borrado */}
+            
             {confirm.open && (
                 <div className="modal-backdrop" onClick={() => setConfirm({ open: false, id: null, title: "" })}>
                     <div className="modal small" onClick={(e) => e.stopPropagation()}>
