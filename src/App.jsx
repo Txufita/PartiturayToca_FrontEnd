@@ -1,10 +1,10 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';  
 import Home from './Pages/Home';
-import Register from './Pages/register'; 
+import Register from './Pages/Register'; 
 import Login from './Pages/Login';
 import About from './Pages/About';
-import AdminHome from "./pages/admin/Home";
+import AdminHome from "./Pages/Admin/Home";
 import ScoresAdmin from './Pages/Admin/Scores';
 import ProtectedRoute from './Router/ProtectedRoute';
 import ScoreDetail from './Pages/ScoreDetail';
