@@ -14,27 +14,31 @@ export default function Header() {
 
 
     return (
-        <header className='header'>
-            <div className="container">
-                <div>
-                    <Link to="/" className="logo">
-                        <img src="/Logo.png" alt="Logo" />
-                    </Link>
-                </div>
+        <header className="header">
+            <div className="container header-inner card">
+                <Link to="/" className="logo" aria-label="Inicio">
+                    <img src="/Logo.png" alt="Logo" />
+                </Link>
 
-                <nav className='nav'>
+                <nav className="nav">
                     <Link to="/">Inicio</Link>
                     <Link to="/about">Nosotros</Link>
+
                     {isAuth ? (
-                        <><span className='user'>Hola</span>
-                            <button onClick={handleLogout} className='btn-logout'>Salir</button>
+                        <>
+                            <span className="user-badge">Hola {user.username}</span>
+                            <button onClick={handleLogout} className="btn btn-danger btn-sm">
+                                Salir
+                            </button>
                         </>
                     ) : (
-                        <Link className="btn-out" to="/login">Entrar</Link>
-
+                        <Link className="btn btn-primary btn-sm" to="/login">
+                            Entrar
+                        </Link>
                     )}
                 </nav>
             </div>
         </header>
     );
+
 }

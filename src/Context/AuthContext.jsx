@@ -25,7 +25,7 @@ export default function AuthProvider({ children }) {
         try {
             const data = await login({ email, password });
             persist({ user: data.user, token: data.token });
-            return { ok: true };
+            return { ok: true, user: data.user }; 
         } catch (error) {
             return { ok: false, error: error.message };
         }
@@ -66,7 +66,3 @@ export default function AuthProvider({ children }) {
         {children}
     </AuthContext.Provider>
 }
-
-
-
-

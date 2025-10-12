@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="footer-glow footer-glow--orange" />
 
       <div className="footer-inner">
-       
+        {/* Brand */}
         <div className="footer-col">
           <div className="brand">
             <span className="brand-logo">🎼</span>
@@ -19,7 +19,7 @@ export default function Footer() {
           </p>
         </div>
 
-        
+        {/* Links rápidos */}
         <nav className="footer-col">
           <h4>Enlaces</h4>
           <ul className="links">
@@ -39,7 +39,7 @@ export default function Footer() {
           </ul>
         </nav>
 
-        
+        {/* Newsletter */}
         <div className="footer-col">
           <h4>Newsletter</h4>
           <p className="muted">Novedades y partituras destacadas.</p>

@@ -12,3 +12,6 @@ export function postInstrument(instrument) {
 export function deleteInstrument(id) {
     return api.delete(`/instruments/${id}`);
 }
+export function updateInstruments(id, instrument) {
+  return api.put(`/instruments/${id}`, instrument);
+}

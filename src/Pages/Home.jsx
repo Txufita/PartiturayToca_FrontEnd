@@ -1,12 +1,15 @@
-import Hero from "../components/Hero";   
+import Hero from "../components/Hero"; 
+import Header from '../components/Header';
+import Footer from "../components/Footer";
 
 import ScoreList from "../components/ScoreList";
 export default function Home() { 
   return (
     <div>
+      <Header />
       <Hero />
       <ScoreList />
-      <h1>Página de inicio</h1>  
-    </div>
-  );
-}   
+      <Footer />
+    </div>
+  );
+}
