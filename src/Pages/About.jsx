@@ -11,13 +11,12 @@ export default function About() {
             <div className="about-content">
                 <h2>Nuestra Misión</h2>
 
-                <p>Nuestra misión es proporcionar a los pianistas de todos los niveles acceso a partituras de alta calidad y
-                    tutoriales detallados para ayudarles a alcanzar sus objetivos musicales.</p>
+                <p>Nuestra misión es proporcionar a los músicos de todo tipo acceso a partituras variadas para que puedan tocar todo aquellos que quieran. A largo plazo queremos ser una comunidad de músicos que compartamos tanto material como intereses, experiencias, y por qué no, toquemos juntos</p>
             </div>
             <div className="about-contact">
                 <h2>Contacto</h2>
                 <p>Si tienes alguna pregunta o sugerencia, no dudes en contactarnos a través de nuestro formulario de contacto o
-                    enviándonos un correo electrónico a   <a href="mailto: ejemplo@mail.com">aquí</a> </p>
+                    enviándonos un correo electrónico a <a href="mailto: ejemplo@mail.com">aquí</a></p>
               
             </div>
         </section>

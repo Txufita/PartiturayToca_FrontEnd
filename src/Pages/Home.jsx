@@ -1,7 +1,7 @@
-import Hero from "../components/Hero";   // Importa o componente Hero do diretório components
+import Hero from "../components/Hero";   
 
 import ScoreList from "../components/ScoreList";
-export default function Home() { // Define e exporta o componente funcional Home
+export default function Home() { 
   return (
     <div>
       <Hero />

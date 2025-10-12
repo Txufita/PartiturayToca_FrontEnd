@@ -1,10 +1,10 @@
-import './App.css' // Importa o arquivo CSS para estilizar o componente App
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';  // Importa componentes do react-router-dom para roteamento
-import Home from './Pages/Home'; // Importa o componente Home da pasta Pages
-import Register from './Pages/register'; // Importa o componente Register da pasta Pages
-import Login from './Pages/login'; // Importa o componente Login da pasta Pages
+import './App.css'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './Pages/Home';
+import Register from './Pages/register';
+import Login from './Pages/login';
 import About from './Pages/About';
-import Header from './components/Header'; // Importa o componente Header da pasta components
+import Header from './components/Header';
 import ScoresAdmin from './Pages/Admin/Scores';
 import ProtectedRoute from './Router/ProtectedRoute';
 
@@ -29,4 +29,4 @@ function App() {
   )
 }
 
-export default App // Exporta o componente App como padrão
+export default App 

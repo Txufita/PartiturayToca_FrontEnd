@@ -36,7 +36,7 @@ export default function Login() {
                 <button type="submit" disabled={loading}>{loading ? "Cargando..." : "Entrar"}</button>
                 {error && <p className="error">{error}</p>}
             </form>
-            <p>¿No tienes una cuenta?<Link className="registro" to="/register"> Regístrate!</Link></p>
+            <p>¿No tienes una cuenta?<Link className="registro" to="/register"> Regístráte!</Link></p>
         </div>
     )
 }

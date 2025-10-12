@@ -59,16 +59,16 @@ export default function ScoresAdmin() {
                     </tr>
                 </thead>
                 <tbody>
-                    {filtered.map(s=>(
+                    {filtered.map(s => (
                         <tr key={s.id}>
                             <td>{s.id}</td>
                             <td>{s.title}</td>
                             <td>{s.composer_name}</td>
                             <td>{s.instrument_name}</td>
-                            <td>{s.file_path?(
-                              <a className="link" target="_blank" href={s.file_path}>Ver</a>  
-                            ):(
-                               "_"                        
+                            <td>{s.file_path ? (
+                                <a className="link" target="_blank" href={s.file_path}>Ver</a>
+                            ) : (
+                                "_"
                             )}</td>
                             <td>{s.file_type}</td>
                             <td>
@@ -76,7 +76,7 @@ export default function ScoresAdmin() {
                                 <button className="delete">Eliminar</button>
                             </td>
                         </tr>
-                
+
                     ))}
                 </tbody>
             </table>

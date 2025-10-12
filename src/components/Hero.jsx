@@ -1,8 +1,8 @@
-import "./Hero.css"  // Importa o arquivo CSS para estilizar o componente Hero
+import "./Hero.css" 
 
-export default function Hero() { // Define e exporta o componente funcional Hero
+export default function Hero() { 
     return (
-        <section className='hero'> {/*Seção principal com a classe 'hero'*/}
+        <section className='hero'> {}
             <div className="hero-text"> 
                 <h1>Partitura y Toca</h1> 
                 <p>Te estabamos esperando hace ya un buen rato.</p> 
